@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Makan Anjungan Indah | Kuliner Pesisir & Sambal Gami Bontang</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        ocean: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        sunset: {
+                            DEFAULT: '#f97316',
+                            light: '#fb923c',
+                            dark: '#c2410c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(12, 74, 110, 0.88), rgba(7, 89, 133, 0.94)), url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-ocean-600 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-ocean-600 flex items-center justify-center text-white shadow-md shadow-ocean-600/30">
+                    <i class="fa-solid fa-water text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-base sm:text-lg text-slate-900 tracking-tight block leading-tight">Anjungan Indah</span>
+                    <span class="text-[11px] sm:text-xs text-slate-500 font-medium">2 Cabang Resmi di Bontang</span>
+                </div>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                <a href="#beranda" class="text-slate-600 hover:text-ocean-600 transition">Beranda</a>
+                <a href="#tentang" class="text-slate-600 hover:text-ocean-600 transition">Tentang Kami</a>
+                <a href="#menu" class="text-slate-600 hover:text-ocean-600 transition">Menu Pilihan</a>
+                <a href="#cabang" class="text-slate-600 hover:text-ocean-600 transition">Lokasi & Cabang</a>
+                <a href="#dokumentasi" class="text-slate-600 hover:text-ocean-600 transition">Dokumentasi</a>
+                <a href="#ulasan" class="text-slate-600 hover:text-ocean-600 transition">Ulasan</a>
+            </nav>
+
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <a href="tel:054826722" class="hidden sm:flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2.5 rounded-xl font-medium text-xs sm:text-sm transition">
+                    <i class="fa-solid fa-phone text-ocean-600"></i>
+                    <span>(0548) 26722</span>
+                </a>
+                <button onclick="openReservationModal()" class="bg-sunset hover:bg-sunset-dark text-white px-4 sm:px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm shadow-lg shadow-sunset/30 transition transform hover:-translate-y-0.5">
+                    Reservasi Meja
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="beranda" class="hero-bg pt-28 pb-16 sm:pt-36 sm:pb-24 md:pt-44 md:pb-32 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold border border-white/20">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Buka Setiap Hari • Cabang 1 & Cabang 2 (s.d 22.00 WITA)</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Sensasi Kuliner Pesisir <span class="text-sunset-light">Sambal Gami & Seafood Bontang</span>
+                    </h1>
+                    <p class="text-sm sm:text-base md:text-lg text-slate-200 font-normal leading-relaxed">
+                        Nikmati kelezatan Sambal Gami legendaris di atas laut Bontang Kuala (Cabang 1) atau suasana modern & fasilitas karaoke di Satimpo (Cabang 2).
+                    </p>
+                    <div class="flex flex-wrap gap-3 sm:gap-4 pt-2">
+                        <a href="#menu" class="bg-sunset hover:bg-sunset-dark text-white px-6 sm:px-7 py-3.5 rounded-xl font-semibold text-sm shadow-lg shadow-sunset/30 transition flex items-center space-x-2">
+                            <span>Lihat Menu Pilihan</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#cabang" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 sm:px-7 py-3.5 rounded-xl font-semibold text-sm backdrop-blur-md transition flex items-center space-x-2">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Pilih Cabang (1 & 2)</span>
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-white/20">
+                        <div>
+                            <div class="text-xl sm:text-2xl font-bold flex items-center gap-1">4.3 <i class="fa-solid fa-star text-amber-400 text-sm sm:text-base"></i></div>
+                            <div class="text-[11px] sm:text-xs text-slate-300">800+ Ulasan Cabang 1</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-bold">Rp 50k - 150k</div>
+                            <div class="text-[11px] sm:text-xs text-slate-300">Kisaran Per Orang</div>
+                        </div>
+                        <div>
+                            <div class="text-xl sm:text-2xl font-bold">2 Cabang</div>
+                            <div class="text-[11px] sm:text-xs text-slate-300">Bontang Kuala & Satimpo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mt-4 lg:mt-0">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Suasana Restoran Anjungan Indah" class="w-full h-[320px] sm:h-[420px] md:h-[480px] object-cover hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-5 sm:p-6">
+                            <div class="text-white">
+                                <span class="bg-ocean-600 text-[11px] sm:text-xs px-3 py-1 rounded-full font-semibold">Cabang 1: Bontang Kuala</span>
+                                <h3 class="text-lg sm:text-xl font-bold mt-2">Suasana Santai di Atas Laut</h3>
+                                <p class="text-xs sm:text-sm text-slate-300">Destinasi wisata kuliner ikonik di atas laut Kota Bontang, Kalimantan Timur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-ocean-600 font-semibold tracking-wider uppercase text-xs">Pengalaman Autentik</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mt-2">Dua Pilihan Suasana Menarik untuk Anda</h2>
+                <div class="w-16 h-1.5 bg-sunset mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 bg-ocean-100 text-ocean-600 rounded-2xl flex items-center justify-center text-xl sm:text-2xl mb-6 group-hover:bg-ocean-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">Cabang 1: Di Atas Laut</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Terletak di ujung Bontang Kuala. Kendaraan parkir di area yang disediakan, lalu dilanjutkan jalan kaki atau naik bentor sejauh ±200 meter menyusuri jembatan laut.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 text-sunset rounded-2xl flex items-center justify-center text-xl sm:text-2xl mb-6 group-hover:bg-sunset group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">Cabang 2: Satimpo & Karaoke</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Terletak di Jl. HM Ardans, Satimpo. Menawarkan tempat yang luas, bersih, area AC, serta fasilitas ruangan karaoke untuk kenyamanan keluarga dan acara kumpul bersama.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition group">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-xl sm:text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-3">Sambal Gami Legendaris</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Kedua cabang menyajikan kelezatan khas Bontang: Sambal gami mendidih di atas hotplate tanah liat dengan ikan Bawis, Kerapu, cumi, dan aneka seafood segar pilihan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-16 sm:py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                <span class="text-ocean-600 font-semibold tracking-wider uppercase text-xs">Menu Favorit & Sorotan</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mt-2">Cita Rasa Laut yang Menggugah Selera</h2>
+                <div class="w-16 h-1.5 bg-sunset mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-600 text-xs sm:text-sm mt-3">Tersedia 6 menu pilihan utama yang langsung terlihat untuk kenyamanan pesanan Anda.</p>
+            </div>
+
+            <!-- Filter Categories -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10 sm:mb-12">
+                <button onclick="filterMenu('all')" class="menu-btn active px-4 sm:px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm transition bg-ocean-600 text-white shadow-sm">Semua Menu</button>
+                <button onclick="filterMenu('gammi')" class="menu-btn px-4 sm:px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm transition bg-white text-slate-600 hover:bg-slate-200 shadow-sm">Sambal Gami</button>
+                <button onclick="filterMenu('seafood')" class="menu-btn px-4 sm:px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm transition bg-white text-slate-600 hover:bg-slate-200 shadow-sm">Seafood & Bakar</button>
+                <button onclick="filterMenu('lainnya')" class="menu-btn px-4 sm:px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm transition bg-white text-slate-600 hover:bg-slate-200 shadow-sm">Sup & Minuman</button>
+            </div>
+
+            <!-- Menu Grid (Compact 6 Items displayed upfront) -->
+            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                <!-- Item 1 -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group flex flex-col justify-between" data-category="gammi">
+                    <div>
+                        <div class="h-40 sm:h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Gammi Bawis" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-sunset text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">Terfavorit</span>
+                        </div>
+                        <div class="p-4 sm:p-5">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-base sm:text-lg font-bold text-slate-900">Gammi Bawis</h3>
+                                <span class="text-ocean-600 font-bold text-sm">Rp 65.000</span>
+                            </div>
+                            <p class="text-slate-600 text-xs line-clamp-2">Ikan Bawis segar khas Bontang dimasak dengan sambal gami mendidih di atas hotplate tanah liat.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 pt-0">
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-[11px] text-slate-500">
+                            <span class="flex items-center gap-1 text-sunset font-medium"><i class="fa-solid fa-fire"></i> Pedas Custom</span>
+                            <button onclick="addToOrder('Gammi Bawis', 65000)" class="bg-ocean-50 text-ocean-600 hover:bg-ocean-600 hover:text-white px-3 py-1.5 rounded-xl font-semibold transition">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group flex flex-col justify-between" data-category="seafood">
+                    <div>
+                        <div class="h-40 sm:h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Ikan Kerapu Pasero" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-ocean-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">Sorotan Cabang 2</span>
+                        </div>
+                        <div class="p-4 sm:p-5">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-base sm:text-lg font-bold text-slate-900">Ikan Kerapu Pasero</h3>
+                                <span class="text-ocean-600 font-bold text-sm">Rp 85.000</span>
+                            </div>
+                            <p class="text-slate-600 text-xs line-clamp-2">Ikan Kerapu pilihan segar dimasak gami atau bakar dengan bumbu khas Anjungan Indah.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 pt-0">
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-[11px] text-slate-500">
+                            <span class="flex items-center gap-1 text-ocean-600 font-medium"><i class="fa-solid fa-fish"></i> Tangkapan Nelayan</span>
+                            <button onclick="addToOrder('Ikan Kerapu Pasero', 85000)" class="bg-ocean-50 text-ocean-600 hover:bg-ocean-600 hover:text-white px-3 py-1.5 rounded-xl font-semibold transition">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group flex flex-col justify-between" data-category="seafood">
+                    <div>
+                        <div class="h-40 sm:h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" alt="Cumi Goreng Telur Asin" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-ocean-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow">Rekomendasi</span>
+                        </div>
+                        <div class="p-4 sm:p-5">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-base sm:text-lg font-bold text-slate-900">Cumi Goreng Telur Asin</h3>
+                                <span class="text-ocean-600 font-bold text-sm">Rp 60.000</span>
+                            </div>
+                            <p class="text-slate-600 text-xs line-clamp-2">Cumi renyah berbalut saus telur asin yang gurih, kental, dan sangat lezat.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 pt-0">
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-[11px] text-slate-500">
+                            <span class="flex items-center gap-1 text-ocean-600 font-medium"><i class="fa-solid fa-utensils"></i> Favorit Keluarga</span>
+                            <button onclick="addToOrder('Cumi Goreng Telur Asin', 60000)" class="bg-ocean-50 text-ocean-600 hover:bg-ocean-600 hover:text-white px-3 py-1.5 rounded-xl font-semibold transition">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group flex flex-col justify-between" data-category="gammi">
+                    <div>
+                        <div class="h-40 sm:h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Paket Hemat Dori Teriyaki" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-4 sm:p-5">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-base sm:text-lg font-bold text-slate-900">Paket Hemat Dori Teriyaki</h3>
+                                <span class="text-ocean-600 font-bold text-sm">Rp 50.000</span>
+                            </div>
+                            <p class="text-slate-600 text-xs line-clamp-2">Paket lengkap fillet ikan dori lembut saus teriyaki disajikan dengan nasi hangat dan es teh.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 pt-0">
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-[11px] text-slate-500">
+                            <span class="flex items-center gap-1 text-sunset font-medium"><i class="fa-solid fa-fire"></i> Paket Hemat</span>
+                            <button onclick="addToOrder('Paket Hemat Dori Teriyaki', 50000)" class="bg-ocean-50 text-ocean-600 hover:bg-ocean-600 hover:text-white px-3 py-1.5 rounded-xl font-semibold transition">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group flex flex-col justify-between" data-category="lainnya">
+                    <div>
+                        <div class="h-40 sm:h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Coto Makassar" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-4 sm:p-5">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-base sm:text-lg font-bold text-slate-900">Coto Makassar</h3>
+                                <span class="text-ocean-600 font-bold text-sm">Rp 45.000</span>
+                            </div>
+                            <p class="text-slate-600 text-xs line-clamp-2">Sup daging berkuah kental kaya rempah pilihan yang hangat dan gurih.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 pt-0">
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-[11px] text-slate-500">
+                            <span class="flex items-center gap-1 text-ocean-600 font-medium"><i class="fa-solid fa-bowl-food"></i> Hangat & Gurih</span>
+                            <button onclick="addToOrder('Coto Makassar', 45000)" class="bg-ocean-50 text-ocean-600 hover:bg-ocean-600 hover:text-white px-3 py-1.5 rounded-xl font-semibold transition">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group flex flex-col justify-between" data-category="lainnya">
+                    <div>
+                        <div class="h-40 sm:h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="Kangkung Cha & Melon Squash" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-4 sm:p-5">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-base sm:text-lg font-bold text-slate-900">Kangkung Cha & Melon Squash</h3>
+                                <span class="text-ocean-600 font-bold text-sm">Rp 35.000</span>
+                            </div>
+                            <p class="text-slate-600 text-xs line-clamp-2">Tumis kangkung segar dengan minuman segar melon squash.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 pt-0">
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-[11px] text-slate-500">
+                            <span class="flex items-center gap-1 text-ocean-600 font-medium"><i class="fa-solid fa-mug-hot"></i> Segar Pesisir</span>
+                            <button onclick="addToOrder('Kangkung Cha & Melon Squash', 35000)" class="bg-ocean-50 text-ocean-600 hover:bg-ocean-600 hover:text-white px-3 py-1.5 rounded-xl font-semibold transition">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <div class="inline-flex items-center gap-3 bg-white px-6 py-3.5 rounded-2xl shadow-sm border border-slate-200">
+                    <i class="fa-solid fa-wallet text-ocean-600 text-base"></i>
+                    <p class="text-xs sm:text-sm text-slate-700 font-medium">Estimasi Pengeluaran: <span class="text-ocean-900 font-bold">Rp 50.000 – Rp 150.000 per orang</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cabang" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-ocean-600 font-semibold tracking-wider uppercase text-xs">Lokasi & 2 Cabang Resmi</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mt-2">Kunjungi Rumah Makan Anjungan Indah</h2>
+                <div class="w-16 h-1.5 bg-sunset mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                <!-- Cabang 1 (Bontang Kuala) -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-60 sm:h-64 overflow-hidden relative bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Cabang 1 Anjungan Indah Bontang Kuala" 
+                                 class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                            <span class="absolute top-4 left-4 bg-ocean-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">Cabang 1 • Pusat Di Atas Laut</span>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Rumah Makan Anjungan Indah</h3>
+                                <span class="text-[11px] sm:text-xs font-semibold text-emerald-600 flex items-center gap-1 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                                    <i class="fa-solid fa-circle text-[8px]"></i> Buka s.d 22.00
+                                </span>
+                            </div>
+                            <p class="text-slate-600 text-xs sm:text-sm mb-6 flex items-start gap-2">
+                                <i class="fa-solid fa-location-dot text-ocean-600 mt-1 flex-shrink-0"></i>
+                                <span>4GR9+X2F, JL. Kapten Piere Tendean, Tanjung Laut, Kec. Bontang Utara, Kota Bontang, Kalimantan Timur 70231</span>
+                            </p>
+                            <div class="space-y-3 mb-6 text-xs sm:text-sm text-slate-600">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-phone text-ocean-600 w-5"></i>
+                                    <span class="font-semibold">(0548) 26722</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-star text-amber-500 w-5"></i>
+                                    <span>Rating: 4.3 dari 800+ ulasan Google Maps</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-car text-ocean-600 w-5"></i>
+                                    <span>Mobil parkir di area yang disediakan, lalu jalan kaki / naik bentor ±200m</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-0 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <span class="text-xs text-slate-500">Suasana: Pesisir di Atas Laut</span>
+                        <a href="https://maps.app.goo.gl/v4suBqnRM3qNAuc49" target="_blank" class="w-full sm:w-auto bg-ocean-600 hover:bg-ocean-800 text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-map-location-dot"></i> Google Maps (Cabang 1)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cabang 2 (Cafe & Resto Anjungan Indah Satimpo) -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-60 sm:h-64 overflow-hidden relative bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Cabang 2 Cafe & Resto Anjungan Indah" 
+                                 class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                            <span class="absolute top-4 left-4 bg-sunset text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">Cabang 2 • Satimpo (Modern & Karaoke)</span>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Cafe & Resto Anjungan Indah</h3>
+                                <span class="text-[11px] sm:text-xs font-semibold text-emerald-600 flex items-center gap-1 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                                    <i class="fa-solid fa-circle text-[8px]"></i> Buka s.d 22.20
+                                </span>
+                            </div>
+                            <p class="text-slate-600 text-xs sm:text-sm mb-6 flex items-start gap-2">
+                                <i class="fa-solid fa-location-dot text-sunset mt-1 flex-shrink-0"></i>
+                                <span>4FGG+WV8, Jl. HM Ardans, Satimpo, Kec. Bontang Sel., Kota Bontang, Kalimantan Timur 75325</span>
+                            </p>
+                            <div class="space-y-3 mb-6 text-xs sm:text-sm text-slate-600">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-microphone text-sunset w-5"></i>
+                                    <span>Tersedia Ruangan Karaoke untuk Pengunjung</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-star text-amber-500 w-5"></i>
+                                    <span>Rating: 4.0 dari 89 ulasan Google Maps (Rp 75k-100k)</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-utensils text-sunset w-5"></i>
+                                    <span>Ruangan AC luas, bersih, dan tempat nongkrong modern</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-0 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <span class="text-xs text-slate-500">Suasana: Modern, Luas & Nyaman</span>
+                        <a href="https://maps.app.goo.gl/y5VgqyUxp9SPRVTm6" target="_blank" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-900 text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-map-location-dot"></i> Google Maps (Cabang 2)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dokumentasi" class="py-16 sm:py-20 bg-slate-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                <span class="text-ocean-600 font-semibold tracking-wider uppercase text-xs">Galeri & Kenangan</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mt-2">Dokumentasi Pengunjung & Tamu Spesial</h2>
+                <div class="w-16 h-1.5 bg-sunset mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-600 text-xs sm:text-sm mt-3">Momen kebersamaan para tamu, figur publik, dan keluarga yang pernah berkunjung di Anjungan Indah.</p>
+            </div>
+
+            <!-- Documentation Carousel Container -->
+            <div class="relative">
+                <button onclick="scrollDocs('left')" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-5 z-20 bg-white hover:bg-ocean-600 hover:text-white text-slate-700 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition border border-slate-200">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="scrollDocs('right')" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-5 z-20 bg-white hover:bg-ocean-600 hover:text-white text-slate-700 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition border border-slate-200">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Documentation Track (1 row, 3 visible per screen width with smooth snapping & auto-slide) -->
+                <div id="docs-track" class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-6 pt-2 px-2 scroll-smooth no-scrollbar" style="-webkit-overflow-scrolling: touch;">
+                    <!-- Doc 1 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[calc(33.333%-1rem)] flex-1 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 snap-start flex flex-col justify-between group">
+                        <div class="h-56 sm:h-64 overflow-hidden rounded-xl relative bg-slate-900">
+                            <img src="https://urpbwdxydfjzybsoiazp.supabase.co/storage/v1/object/public/restoran%20anjungan/310326230596526649.jpg" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'" alt="Dokumentasi 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                                <span class="text-white text-[11px] font-semibold bg-ocean-600/90 px-2.5 py-1 rounded-full">Tamu VIP & Keluarga • Cabang 1</span>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-4">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Kunjongan Tamu & Keluarga</h4>
+                            <p class="text-slate-600 text-xs">Suasana santai bersantap kuliner pesisir dengan pemandangan laut.</p>
+                        </div>
+                    </div>
+
+                    <!-- Doc 2 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[calc(33.333%-1rem)] flex-1 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 snap-start flex flex-col justify-between group">
+                        <div class="h-56 sm:h-64 overflow-hidden rounded-xl relative bg-slate-900">
+                            <img src="https://urpbwdxydfjzybsoiazp.supabase.co/storage/v1/object/public/restoran%20anjungan/542824561359324073.jpg" onerror="this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'" alt="Dokumentasi 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                                <span class="text-white text-[11px] font-semibold bg-sunset/90 px-2.5 py-1 rounded-full">Kumpul Komunitas • Cabang 2</span>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-4">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Kumpul Komunitas di Satimpo</h4>
+                            <p class="text-slate-600 text-xs">Menikmati hidangan lezat dan fasilitas modern di Cafe & Resto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Doc 3 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[calc(33.333%-1rem)] flex-1 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 snap-start flex flex-col justify-between group">
+                        <div class="h-56 sm:h-64 overflow-hidden rounded-xl relative bg-slate-900">
+                            <img src="https://urpbwdxydfjzybsoiazp.supabase.co/storage/v1/object/public/restoran%20anjungan/959618633082416665.jpg" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80'" alt="Dokumentasi 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                                <span class="text-white text-[11px] font-semibold bg-emerald-600/90 px-2.5 py-1 rounded-full">Santap Kuliner Pesisir</span>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-4">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Momen Kuliner Bersama Sahabat</h4>
+                            <p class="text-slate-600 text-xs">Seafood segar dan Sambal Gami dengan pelayanan ramah.</p>
+                        </div>
+                    </div>
+
+                    <!-- Doc 4 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[calc(33.333%-1rem)] flex-1 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 snap-start flex flex-col justify-between group">
+                        <div class="h-56 sm:h-64 overflow-hidden rounded-xl relative bg-slate-900">
+                            <img src="https://urpbwdxydfjzybsoiazp.supabase.co/storage/v1/object/public/restoran%20anjungan/images%20(3).jpg" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'" alt="Dokumentasi 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                                <span class="text-white text-[11px] font-semibold bg-ocean-600/90 px-2.5 py-1 rounded-full">Tamu VIP & Selebriti • Cabang 1</span>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-4">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Kunjongan Figur & Selebriti</h4>
+                            <p class="text-slate-600 text-xs">Momen hangat saat bersantap menu khas Gammi Bawis di Anjungan Indah.</p>
+                        </div>
+                    </div>
+
+                    <!-- Doc 5 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[calc(33.333%-1rem)] flex-1 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 snap-start flex flex-col justify-between group">
+                        <div class="h-56 sm:h-64 overflow-hidden rounded-xl relative bg-slate-900">
+                            <img src="https://urpbwdxydfjzybsoiazp.supabase.co/storage/v1/object/public/restoran%20anjungan/images%20(4).jpg" onerror="this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'" alt="Dokumentasi 5" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                                <span class="text-white text-[11px] font-semibold bg-sunset/90 px-2.5 py-1 rounded-full">Kumpul Komunitas • Cabang 2</span>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-4">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Kebersamaan Pengunjung di Satimpo</h4>
+                            <p class="text-slate-600 text-xs">Pengunjung berfoto ria dengan latar dekorasi estetik di area cafe modern.</p>
+                        </div>
+                    </div>
+
+                    <!-- Doc 6 -->
+                    <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[calc(33.333%-1rem)] flex-1 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 snap-start flex flex-col justify-between group">
+                        <div class="h-56 sm:h-64 overflow-hidden rounded-xl relative bg-slate-900">
+                            <img src="https://urpbwdxydfjzybsoiazp.supabase.co/storage/v1/object/public/restoran%20anjungan/images%20(5).jpg" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80'" alt="Dokumentasi 6" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3">
+                                <span class="text-white text-[11px] font-semibold bg-emerald-600/90 px-2.5 py-1 rounded-full">Santap Kuliner Pesisir</span>
+                            </div>
+                        </div>
+                        <div class="p-3 pt-4">
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Momen Kuliner Bersama Sahabat</h4>
+                            <p class="text-slate-600 text-xs">Menikmati hidangan seafood lezat dengan pelayanan ramah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ulasan" class="py-16 sm:py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-ocean-600 font-semibold tracking-wider uppercase text-xs">Ulasan Pengunjung</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mt-2">Apa Kata Mereka di Google Maps?</h2>
+                <div class="w-16 h-1.5 bg-sunset mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative">
+                <button onclick="scrollReviews('left')" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-6 z-20 bg-white hover:bg-ocean-600 hover:text-white text-slate-700 w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-lg flex items-center justify-center transition border border-slate-200">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="scrollReviews('right')" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-6 z-20 bg-white hover:bg-ocean-600 hover:text-white text-slate-700 w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-lg flex items-center justify-center transition border border-slate-200">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Reviews Track -->
+                <div id="reviews-track" class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 px-2 scroll-smooth no-scrollbar" style="-webkit-overflow-scrolling: touch;">
+                    <!-- Review 1 -->
+                    <div class="min-w-[280px] sm:min-w-[340px] md:min-w-[360px] flex-1 bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 relative snap-start flex flex-col justify-between">
+                        <div>
+                            <span class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-ocean-50 text-ocean-700 text-[10px] sm:text-xs px-2.5 py-1 rounded-md font-semibold">Cabang 1: Bontang Kuala</span>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-xs sm:text-sm italic mb-6 leading-relaxed">
+                                "Restoran destinasi kuliner di Bontang, dengan lokasi view laut, dan sambal khas Bontang Gammi dengan ikan Bawis yang sangat enak mantap!"
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Gunawan Sutejo</h4>
+                                <span class="text-[11px] sm:text-xs text-slate-500">Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="min-w-[280px] sm:min-w-[340px] md:min-w-[360px] flex-1 bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 relative snap-start flex flex-col justify-between">
+                        <div>
+                            <span class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-sunset/10 text-sunset text-[10px] sm:text-xs px-2.5 py-1 rounded-md font-semibold">Cabang 2: Satimpo</span>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-xs sm:text-sm italic mb-6 leading-relaxed">
+                                "Beberapa kali berkesempatan makan dan menikmati hidangan di cafe ini, menunya lumayan beragam dan tempatnya cukup luas. Ada ruangan berAC dan area karaoke."
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Just 0989</h4>
+                                <span class="text-[11px] sm:text-xs text-slate-500">Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="min-w-[280px] sm:min-w-[340px] md:min-w-[360px] flex-1 bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 relative snap-start flex flex-col justify-between">
+                        <div>
+                            <span class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-ocean-50 text-ocean-700 text-[10px] sm:text-xs px-2.5 py-1 rounded-md font-semibold">Cabang 1: Bontang Kuala</span>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-xs sm:text-sm italic mb-6 leading-relaxed">
+                                "Restoran pinggir pantai. Aksesnya kalau mau ke lokasi pakai bentor atau jalan kaki sekitar 200 meter. Suasananya sangat seru dan berkesan."
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Giri Eggi</h4>
+                                <span class="text-[11px] sm:text-xs text-slate-500">Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="min-w-[280px] sm:min-w-[340px] md:min-w-[360px] flex-1 bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 relative snap-start flex flex-col justify-between">
+                        <div>
+                            <span class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-sunset/10 text-sunset text-[10px] sm:text-xs px-2.5 py-1 rounded-md font-semibold">Cabang 2: Satimpo</span>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-xs sm:text-sm italic mb-6 leading-relaxed">
+                                "Resto rumah makan dengan makanan khas sambal Gami yang jadi favorit disini. Sambal Gami itu isinya cabe, bawang, tomat dan minyak, hangat dan pedas mantap!"
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Komang Pradnyana</h4>
+                                <span class="text-[11px] sm:text-xs text-slate-500">Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="min-w-[280px] sm:min-w-[340px] md:min-w-[360px] flex-1 bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 relative snap-start flex flex-col justify-between">
+                        <div>
+                            <span class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-ocean-50 text-ocean-700 text-[10px] sm:text-xs px-2.5 py-1 rounded-md font-semibold">Cabang 1: Bontang Kuala</span>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-xs sm:text-sm italic mb-6 leading-relaxed">
+                                "Resto rumah makan favorit dan terkenal di Bontang, Kaltim. Lokasi dengan view lautan. Mantab sekali menikmati sunset di sini."
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Apik Primadya</h4>
+                                <span class="text-[11px] sm:text-xs text-slate-500">Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="min-w-[280px] sm:min-w-[340px] md:min-w-[360px] flex-1 bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 relative snap-start flex flex-col justify-between">
+                        <div>
+                            <span class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-sunset/10 text-sunset text-[10px] sm:text-xs px-2.5 py-1 rounded-md font-semibold">Cabang 2: Satimpo</span>
+                            <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-600 text-xs sm:text-sm italic mb-6 leading-relaxed">
+                                "Overall good. Tempat bersih, nyaman, dan bagus. Menu yang dipesan enak-enak semua, pelayanan ramah dan sangat memuaskan."
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Dhella Eviyanthi</h4>
+                                <span class="text-[11px] sm:text-xs text-slate-500">Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination Dots -->
+                <div class="flex justify-center items-center space-x-2 mt-4" id="review-dots">
+                    <button onclick="currentReviewIndex(0)" class="w-6 h-3 rounded-full bg-ocean-600 transition-all"></button>
+                    <button onclick="currentReviewIndex(1)" class="w-3 h-3 rounded-full bg-slate-300 transition-all"></button>
+                    <button onclick="currentReviewIndex(2)" class="w-3 h-3 rounded-full bg-slate-300 transition-all"></button>
+                    <button onclick="currentReviewIndex(3)" class="w-3 h-3 rounded-full bg-slate-300 transition-all"></button>
+                    <button onclick="currentReviewIndex(4)" class="w-3 h-3 rounded-full bg-slate-300 transition-all"></button>
+                    <button onclick="currentReviewIndex(5)" class="w-3 h-3 rounded-full bg-slate-300 transition-all"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="reservation-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative transform transition-all my-8 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeReservationModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-orange-100 text-sunset flex items-center justify-center text-xl shadow-sm flex-shrink-0">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900">Reservasi Meja & Ruangan</h3>
+                    <p class="text-xs text-slate-500">Pilih cabang dan isi detail kunjungan Anda</p>
+                </div>
+            </div>
+            <form id="reservation-form" onsubmit="handleReservation(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Pilih Cabang Tujuan</label>
+                    <select id="res-branch" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ocean-600 text-sm font-medium bg-slate-50">
+                        <option value="Cabang 1">Cabang 1: Bontang Kuala (Pusat Di Atas Laut)</option>
+                        <option value="Cabang 2">Cabang 2: Satimpo (Cafe, Ruangan AC & Karaoke)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Nama Pemesan</label>
+                    <input type="text" id="res-name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ocean-600 text-sm bg-slate-50" placeholder="cth: Budi Santoso">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Nomor WhatsApp</label>
+                        <input type="tel" id="res-phone" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ocean-600 text-sm bg-slate-50" placeholder="08xxxxxxxxxx">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Jumlah Tamu</label>
+                        <input type="number" id="res-guests" min="1" max="100" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ocean-600 text-sm bg-slate-50" value="2">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Tanggal Kunjungan</label>
+                        <input type="date" id="res-date" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ocean-600 text-sm bg-slate-50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Jam Kunjungan (Ketik Manual WITA)</label>
+                        <input type="text" id="res-time" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ocean-600 text-sm bg-slate-50" placeholder="cth: 19:30 WITA" value="19:00 WITA">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Catatan Khusus (Opsional)</label>
+                    <textarea id="res-notes" rows="2" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ocean-600 text-sm bg-slate-50" placeholder="cth: Minta meja dekat jendela / reservasi ruang karaoke..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-sunset hover:bg-sunset-dark text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-sunset/30 transition transform hover:-translate-y-0.5 text-sm sm:text-base">
+                    Kirim Reservasi via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="branch-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative transform transition-all">
+            <button onclick="closeBranchModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-ocean-600 text-white flex items-center justify-center text-xl shadow-sm flex-shrink-0">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900">Pilih Cabang Tujuan Pesanan</h3>
+                    <p class="text-xs text-slate-500">Tentukan cabang yang akan menyiapkan hidangan Anda</p>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <button onclick="selectCheckoutBranch('Cabang 1')" class="w-full p-4 rounded-2xl border-2 border-slate-200 hover:border-ocean-600 hover:bg-ocean-50/50 transition text-left group">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-slate-900 group-hover:text-ocean-600 text-sm sm:text-base">Cabang 1: Bontang Kuala</span>
+                        <span class="text-[10px] sm:text-xs bg-ocean-100 text-ocean-800 px-2 py-0.5 rounded-md font-semibold">Di Atas Laut</span>
+                    </div>
+                    <p class="text-xs text-slate-500">JL. Kapten Piere Tendean, Tanjung Laut, Bontang Utara • Telp: (0548) 26722</p>
+                </button>
+
+                <button onclick="selectCheckoutBranch('Cabang 2')" class="w-full p-4 rounded-2xl border-2 border-slate-200 hover:border-sunset hover:bg-orange-50/50 transition text-left group">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-slate-900 group-hover:text-sunset text-sm sm:text-base">Cabang 2: Satimpo (Cafe & Resto)</span>
+                        <span class="text-[10px] sm:text-xs bg-orange-100 text-sunset px-2 py-0.5 rounded-md font-semibold">AC & Karaoke</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Jl. HM Ardans, Satimpo, Kec. Bontang Selatan (Kisaran Rp 75k-100k)</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast & Cart Floating Bar -->
+    <div id="toast" class="fixed bottom-24 right-4 sm:bottom-6 sm:right-6 z-50 bg-slate-900 text-white px-5 sm:px-6 py-3.5 rounded-2xl shadow-xl flex items-center space-x-3 transform translate-y-32 opacity-0 transition-all duration-300">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="toast-message" class="text-xs sm:text-sm font-medium">Berhasil ditambahkan!</span>
+    </div>
+
+    <div id="cart-float" class="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto z-40 bg-ocean-900 text-white px-5 sm:px-6 py-3.5 rounded-2xl shadow-2xl hidden flex items-center justify-between sm:justify-start sm:space-x-6 border border-ocean-700">
+        <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-basket-shopping text-sunset text-lg"></i>
+            <div>
+                <span id="cart-count" class="text-xs sm:text-sm font-bold block">0 item</span>
+                <span id="cart-total" class="text-xs sm:text-sm font-semibold text-sunset-light">Rp 0</span>
+            </div>
+        </div>
+        <button onclick="checkoutOrder()" class="bg-sunset hover:bg-sunset-dark text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition shadow-md">
+            Pesan via WA
+        </button>
+    </div>
+
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 mb-16 sm:mb-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-8 mb-8 gap-6 text-center md:text-left">
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-ocean-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-water text-base"></i>
+                    </div>
+                    <span class="font-bold text-lg text-white">Rumah Makan Anjungan Indah</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium">
+                    <a href="#beranda" class="hover:text-white transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-white transition">Tentang</a>
+                    <a href="#menu" class="hover:text-white transition">Menu</a>
+                    <a href="#cabang" class="hover:text-white transition">Lokasi & Cabang</a>
+                    <a href="#dokumentasi" class="hover:text-white transition">Dokumentasi</a>
+                    <a href="#ulasan" class="hover:text-white transition">Ulasan</a>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3 text-center sm:text-left">
+                <p>&copy; 2026 Rumah Makan Anjungan Indah (Cabang Bontang Kuala & Satimpo, Kalimantan Timur). All rights reserved.</p>
+                <p>Telp: (0548) 26722 • Rating 4.3 (800+ Ulasan)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterMenu(category) {
+            const buttons = document.querySelectorAll('.menu-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-ocean-600', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'text-slate-600');
+            });
+            event.target.classList.remove('bg-white', 'text-slate-600');
+            event.target.classList.add('bg-ocean-600', 'text-white', 'shadow-sm');
+
+            const cards = document.querySelectorAll('.menu-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        let cart = [];
+        let reviewAutoScrollTimer = null;
+        let currentReviewPos = 0;
+        let docsAutoScrollTimer = null;
+        let currentDocsPos = 0;
+
+        function addToOrder(name, price) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCartUI();
+            showToast(name + ' ditambahkan ke keranjang!');
+        }
+
+        function updateCartUI() {
+            const floatBar = document.getElementById('cart-float');
+            const countEl = document.getElementById('cart-count');
+            const totalEl = document.getElementById('cart-total');
+
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            if (totalQty > 0) {
+                floatBar.classList.remove('hidden');
+                floatBar.classList.add('flex');
+                countEl.textContent = totalQty + ' item';
+                totalEl.textContent = 'Rp ' + totalPrice.toLocaleString('id-ID');
+            } else {
+                floatBar.classList.add('hidden');
+                floatBar.classList.remove('flex');
+            }
+        }
+
+        function checkoutOrder() {
+            if (cart.length === 0) return;
+            document.getElementById('branch-modal').classList.remove('hidden');
+        }
+
+        function closeBranchModal() {
+            document.getElementById('branch-modal').classList.add('hidden');
+        }
+
+        function selectCheckoutBranch(branch) {
+            closeBranchModal();
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            let waNumber = '';
+            let text = '';
+
+            if (branch === 'Cabang 1') {
+                waNumber = '628996654059';
+                text = `Halo Admin *Rumah Makan Anjungan Indah (Cabang 1 - Bontang Kuala)*.%0A`;
+                text += `Saya ingin melakukan *PEMESANAN MAKANAN* di area atas laut:%0A%0A`;
+                text += `📋 *Rincian Pesanan:*%0A`;
+                cart.forEach((item, index) => {
+                    text += `${index + 1}. *${item.name}* (${item.qty}x) - Rp ${(item.price * item.qty).toLocaleString('id-ID')}%0A`;
+                });
+                text += `%0A💰 *Total Estimasi Pembayaran:* *Rp ${totalPrice.toLocaleString('id-ID')}*%0A`;
+                text += `---------------------------------------%0A`;
+                text += `Mohon konfirmasi pesanan dan total pembayarannya. Terima kasih!`;
+            } else {
+                waNumber = '6281234567890';
+                text = `Halo Admin *Cafe & Resto Anjungan Indah (Cabang 2 - Satimpo)*.%0A`;
+                text += `Saya ingin melakukan *PEMESANAN MAKANAN / RUANGAN*:%0A`;
+                text += `📍 *Lokasi Cabang:* Jl. HM Ardans, Satimpo, Bontang Selatan (Nuansa Modern, AC & Karaoke).%0A%0A`;
+                text += `📋 *Rincian Pesanan:*%0A`;
+                cart.forEach((item, index) => {
+                    text += `${index + 1}. *${item.name}* (${item.qty}x) - Rp ${(item.price * item.qty).toLocaleString('id-ID')}%0A`;
+                });
+                text += `%0A💰 *Total Estimasi Pembayaran:* *Rp ${totalPrice.toLocaleString('id-ID')}*%0A`;
+                text += `---------------------------------------%0A`;
+                text += `Mohon konfirmasi ketersediaan meja/ruangan karaoke serta total pembayarannya. Terima kasih!`;
+            }
+            
+            window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+        }
+
+        function scrollReviews(direction) {
+            const track = document.getElementById('reviews-track');
+            const cardWidth = track.querySelector('div').offsetWidth + 24;
+            if (direction === 'left') {
+                track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            } else {
+                track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            }
+        }
+
+        function currentReviewIndex(index) {
+            const track = document.getElementById('reviews-track');
+            const cardWidth = track.querySelector('div').offsetWidth + 24;
+            track.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
+            currentReviewPos = index;
+            updateReviewDots(index);
+        }
+
+        function updateReviewDots(index) {
+            const dots = document.querySelectorAll('#review-dots button');
+            dots.forEach((dot, idx) => {
+                if (idx === index) {
+                    dot.classList.remove('bg-slate-300', 'w-3');
+                    dot.classList.add('bg-ocean-600', 'w-6');
+                } else {
+                    dot.classList.remove('bg-ocean-600', 'w-6');
+                    dot.classList.add('bg-slate-300', 'w-3');
+                }
+            });
+        }
+
+        function startReviewAutoScroll() {
+            reviewAutoScrollTimer = setInterval(() => {
+                const track = document.getElementById('reviews-track');
+                if (!track) return;
+                const cardWidth = track.querySelector('div').offsetWidth + 24;
+                const maxScroll = track.scrollWidth - track.clientWidth;
+                
+                if (track.scrollLeft >= maxScroll - 20) {
+                    currentReviewPos = 0;
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    currentReviewPos = (currentReviewPos + 1) % 6;
+                    track.scrollTo({ left: cardWidth * currentReviewPos, behavior: 'smooth' });
+                }
+                updateReviewDots(currentReviewPos);
+            }, 4000);
+        }
+
+        function stopReviewAutoScroll() {
+            clearInterval(reviewAutoScrollTimer);
+        }
+
+        function scrollDocs(direction) {
+            const track = document.getElementById('docs-track');
+            const cardWidth = track.querySelector('div').offsetWidth + 24;
+            if (direction === 'left') {
+                track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            } else {
+                track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            }
+        }
+
+        function startDocsAutoScroll() {
+            docsAutoScrollTimer = setInterval(() => {
+                const track = document.getElementById('docs-track');
+                if (!track) return;
+                const cardWidth = track.querySelector('div').offsetWidth + 24;
+                const maxScroll = track.scrollWidth - track.clientWidth;
+                
+                if (track.scrollLeft >= maxScroll - 20) {
+                    currentDocsPos = 0;
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    currentDocsPos = (currentDocsPos + 1) % 6;
+                    track.scrollTo({ left: cardWidth * currentDocsPos, behavior: 'smooth' });
+                }
+            }, 3500);
+        }
+
+        function stopDocsAutoScroll() {
+            clearInterval(docsAutoScrollTimer);
+        }
+
+        function openReservationModal() {
+            document.getElementById('reservation-modal').classList.remove('hidden');
+        }
+
+        function closeReservationModal() {
+            document.getElementById('reservation-modal').classList.add('hidden');
+        }
+
+        function handleReservation(event) {
+            event.preventDefault();
+            const branch = document.getElementById('res-branch').value;
+            const name = document.getElementById('res-name').value;
+            const phone = document.getElementById('res-phone').value;
+            const guests = document.getElementById('res-guests').value;
+            const date = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+            const notes = document.getElementById('res-notes').value;
+
+            const isCabang1 = branch.includes('Cabang 1');
+            const waNumber = isCabang1 ? '628996654059' : '6281234567890';
+
+            let text = '';
+            if (isCabang1) {
+                text = `Halo Admin *Rumah Makan Anjungan Indah (Cabang 1 - Bontang Kuala)*.%0A`;
+                text += `Saya ingin melakukan *RESERVASI MEJA* di area atas laut:%0A%0A`;
+                text += `👤 *Nama Pemesan:* ${name}%0A`;
+                text += `📱 *No. WhatsApp:* ${phone}%0A`;
+                text += `👥 *Jumlah Tamu:* ${guests} Orang%0A`;
+                text += `📅 *Tanggal:* ${date}%0A`;
+                text += `⏰ *Jam Kunjungan:* ${time}%0A`;
+                text += `📝 *Catatan Khusus:* ${notes || '-'}%0A%0A`;
+                text += `Mohon konfirmasi ketersediaan meja untuk kedatangan kami. Terima kasih!`;
+            } else {
+                text = `Halo Admin *Cafe & Resto Anjungan Indah (Cabang 2 - Satimpo)*.%0A`;
+                text += `Saya ingin melakukan *RESERVASI MEJA / RUANGAN KARAOKE*:%0A%0A`;
+                text += `👤 *Nama Pemesan:* ${name}%0A`;
+                text += `📱 *No. WhatsApp:* ${phone}%0A`;
+                text += `👥 *Jumlah Tamu:* ${guests} Orang%0A`;
+                text += `📅 *Tanggal:* ${date}%0A`;
+                text += `⏰ *Jam Kunjungan:* ${time}%0A`;
+                text += `📝 *Catatan Khusus:* ${notes || '-'}%0A%0A`;
+                text += `Mohon konfirmasi ketersediaan ruangan AC / meja / karaoke untuk kedatangan kami. Terima kasih!`;
+            }
+            
+            closeReservationModal();
+            showToast('Reservasi berhasil diarahkan ke WhatsApp cabang!');
+            window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msg = document.getElementById('toast-message');
+            msg.textContent = message;
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 3500);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('res-date');
+            if(dateInput) {
+                dateInput.min = today;
+                dateInput.value = today;
+            }
+
+            const track = document.getElementById('reviews-track');
+            if (track) {
+                track.addEventListener('mouseenter', stopReviewAutoScroll);
+                track.addEventListener('mouseleave', startReviewAutoScroll);
+                track.addEventListener('touchstart', stopReviewAutoScroll);
+                startReviewAutoScroll();
+            }
+
+            const docsTrack = document.getElementById('docs-track');
+            if (docsTrack) {
+                docsTrack.addEventListener('mouseenter', stopDocsAutoScroll);
+                docsTrack.addEventListener('mouseleave', startDocsAutoScroll);
+                docsTrack.addEventListener('touchstart', stopDocsAutoScroll);
+                startDocsAutoScroll();
+            }
+        });
+    </script>
+</body>
+</html>
